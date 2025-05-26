@@ -38,6 +38,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3006);
+const port = process.env.PORT || 3006;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 module.exports = app;
